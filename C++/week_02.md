@@ -824,7 +824,7 @@ int main() {
 ## Assignments Loops and Printing pattern
 
 <details>
-  <summary> <b> Assignment Loops and Pattern Printing </b> </summary>
+  <summary> <b> Assignment Loops </b> </summary>
 
 | Num  | Problem                                                             | Topic   | Idea  | What I did Wrong | Status         | Revisit? |
 |------|---------------------------------------------------------------------|---------|-------|------------------|----------------|----------|
@@ -843,6 +843,33 @@ int main() {
 | M    | [Reverse Number and Store in a Variable](https://codeforces.com/group/4vcXCPx8NY/contest/666169/problem/M)| | | | | |
 | N    | [Palindrome](https://codeforces.com/group/4vcXCPx8NY/contest/666169/problem/N)| | | | | |
 
+
+</details>
+
+<details>
+  <summary> <b> Assignment Pattern Printing </b> </summary>
+
+| Num  | Problem                                                             | Topic   | Idea  | What I did Wrong | Status         | Revisit? |
+|------|---------------------------------------------------------------------|---------|-------|------------------|----------------|----------|
+| A    | [2-Stars](https://codeforces.com/group/4vcXCPx8NY/contest/666171/problem/A)| |   |   | |       |
+| B    | [M-Stars](https://codeforces.com/group/4vcXCPx8NY/contest/666171/problem/B)| | | | | |
+| C    | [Pyramid](https://codeforces.com/group/4vcXCPx8NY/contest/666171/problem/C)| | | | | |
+| D    | [Inverted Pyramid](https://codeforces.com/group/4vcXCPx8NY/contest/666171/problem/D)| | | | | |
+| E    | [Square](https://codeforces.com/group/4vcXCPx8NY/contest/666171/problem/E)| | | | | |
+| F    | [Hollow Square](https://codeforces.com/group/4vcXCPx8NY/contest/666171/problem/F)| | | | | |
+| G    | [Hollow Rectangle](https://codeforces.com/group/4vcXCPx8NY/contest/666171/problem/G)| | | | | |
+| H   | [Triangle ](https://codeforces.com/group/4vcXCPx8NY/contest/666171/problem/H1)| | | | | |
+| I    | [Hollow Triangle](https://codeforces.com/group/4vcXCPx8NY/contest/666171/problem/I)| | | | | |
+| J    | [Inverted Hollow Triangle](https://codeforces.com/group/4vcXCPx8NY/contest/666171/problem/J)| | | | | |
+| K    | [Diamong](https://codeforces.com/group/4vcXCPx8NY/contest/666171/problem/K)| | | | | |
+| L    | [Hollow Diamond](https://codeforces.com/group/4vcXCPx8NY/contest/666171/problem/L)| | | | | |
+| M    | [Inverted Diamond ](https://codeforces.com/group/4vcXCPx8NY/contest/666171/problem/M)| | | | | |
+| N    | [Crown](https://codeforces.com/group/4vcXCPx8NY/contest/666171/problem/N)| | | | | |
+| O    | [Butterfly](https://codeforces.com/group/4vcXCPx8NY/contest/666171/problem/O)| | | | | |
+| P    | [Number Triangle](https://codeforces.com/group/4vcXCPx8NY/contest/666171/problem/P)| | | | | |
+| Q    | [Binary Pyramid](https://codeforces.com/group/4vcXCPx8NY/contest/666171/problem/Q)| | | | | |
+| R    | [Vertical Triangle](https://codeforces.com/group/4vcXCPx8NY/contest/666171/problem/R)| | | | | |
+| S    | [Inverted Vertical Triangle](https://codeforces.com/group/4vcXCPx8NY/contest/666171/problem/S)| | | | | |
 
 </details>
 
