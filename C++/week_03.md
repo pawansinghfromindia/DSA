@@ -95,7 +95,9 @@ int main() {
 
 </details>
 
-**Functions**
+## Functions
+
+What is a **Function**?
 - Set of statements
 - Code Reusability : Write only once, Reuse multiple times
 - Makes code: Cleaner, Shorter, Easier to debug
@@ -284,11 +286,66 @@ Largest factor of any given number  = N.
 
 Print the factors of a given number n.
 ```cpp
+#include <bits/stdc++.h>
+using namespace std;
 
+// function for printing factors
+void factors(int num){
+  for(int i = 1; i <= num; i++){
+      if(num % i == 0){
+        cout << i << " ";
+      }
+  }
+  cout << endl;
+}
+
+int main(){
+  
+  int n;
+  cin >> n;
+  
+  factors(n);
+  
+  return 0;
+}
 ```
 Print the count of factors of a given number n.
 ```cpp
+#include <bits/stdc++.h>
+using namespace std;
 
+// function to print factors
+void factors(int num){
+  for(int i = 1; i <= num; i++){
+      if(num % i == 0){
+        cout << i << " ";
+      }
+  }
+  cout << endl;
+}
+
+// function to count factors
+int factorsCount(int num){
+  int count = 0;
+  for(int i = 1; i <= num; i++){
+      if(num % i == 0){
+        count += 1;
+      }
+  }
+  return count;
+}
+
+int main(){
+  
+  int n;
+  cin >> n;
+  
+  factors(n);
+  int result = factorsCount(n);
+  cout << result;
+  
+  return 0;
+}
 ```
 
 </details>
@@ -303,9 +360,132 @@ Prime Numbers : 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31
 5 -> 1, 5       Prime
 6 -> 1, 2, 3, 6 Not Prime
 ```
+> Why `1` is not prime?
+> - This is bcuz the definition of prime itself say - the number which has only 2 factors (1 and itslef) is only considered as prime.
+> - But `1` has only one factor that is 1.
+
+<details>
+  <summary> Example </summary>
+
+Check if a number is prime or not.
+```cpp
+#include <bits/stdc++.h>
+
+using namespace std;
 
 
+// function to count factors
+int factorCount(int num) {
+    int count = 0;
+    for (int i = 1; i <= num; i++) {
+        if (num % i == 0) {
+            count += 1;
+        }
+    }
+    return count;
+}
 
+int main() {
+
+    int n;
+    cin >> n;
+
+    // the number which has only 2 factor count is prime
+    int count = factorCount(n);
+    if (count == 2) {
+        cout << "Prime";
+    }
+    else {
+        cout << "Not Prime";
+    }
+
+    cout << endl;
+
+    return 0;
+}
+```
+
+Print all the prime number from 1 to N.
+```cpp
+#include <bits/stdc++.h>
+
+using namespace std;
+
+
+// function to count factors
+int factorCount(int num) {
+    int count = 0;
+    for (int i = 1; i <= num; i++) {
+        if (num % i == 0) {
+            count += 1;
+        }
+    }
+    return count;
+}
+
+int main() {
+
+    int n;
+    cin >> n;
+
+    for(int i=1; i<=n; i++){
+        if(factorCount(i) == 2){
+            cout << i << " ";
+        }
+    }
+    
+    cout << endl;
+
+    return 0;
+}
+```
+or
+```cpp
+#include <bits/stdc++.h>
+
+using namespace std;
+
+
+// function to count factors
+int factorCount(int num) {
+    int count = 0;
+    for (int i = 1; i <= num; i++) {
+        if (num % i == 0) {
+            count += 1;
+        }
+    }
+    return count;
+}
+
+// function for checking prime
+bool isPrime(int n) {
+    int count = factorCount(n);
+    if (count == 2) {
+        return true;
+    }
+    return false;
+}
+
+int main() {
+
+    int n;
+    cin >> n;
+
+    for (int i = 1; i <= n; i++) {
+        if (isPrime(i)) {
+            cout << i << " ";
+        }
+    }
+
+    cout << endl;
+
+    return 0;
+}
+```
+
+</details>
+
+Note : **CPH Judge Extension** in VSCode Extension.
 
 
 
