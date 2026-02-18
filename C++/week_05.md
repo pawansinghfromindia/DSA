@@ -381,7 +381,7 @@ int main()
 # String
 
 <details>
-  <summary> String in C++ </summary>
+  <summary> Char Array in C++ </summary>
 
 <br/>
 
@@ -430,6 +430,401 @@ int main()
     cout << endl;
     
 
+
+    return 0;
+}
+```
+
+#
+</details>
+
+<details>
+  <summary> ASCII Value </summary>
+
+<br/>
+
+**Check Same** <br/>
+Given two characters in the input, check whether they are same or not.
+```
+Input :
+a b             a a
+Output :
+No              Yes
+```
+```cpp
+#include<iostream>
+using namespace std;
+
+int main(){
+
+    char ch1, ch2;
+    cin >> ch1 >> ch2;
+
+    if(ch1 == ch2){
+        cout << "Yes";
+    }
+    else{
+        cout << "No";
+    }
+
+    cout << endl;
+
+    return 0;
+}
+```
+
+We know numbers are stored in BINARY NUMBER but haven't to wonder How these characters are converted in BINARY?
+```cpp
+int x = 20;
+
+int binary = 10100
+```
+
+
+**ASCII Values**
+> **Every basic character on the keyboard is assigned a unique numeric value by the computer, called its ASCII value.**
+
+<img width="302" height="114" alt="image" src="https://github.com/user-attachments/assets/ce0ce28d-7972-4361-ac4e-4547125207f4" />
+<br/>
+<img width="500" height="350" alt="image" src="https://github.com/user-attachments/assets/5d9d0fcb-dcf6-47d3-8ab1-4cf93b065145" />
+<br/>
+
+**4 Things to be remembered only**
+- [x] From 'A' to 'Z' 65 to 90
+- [x] From 'a' to 'z' 97 to 122
+- [x] From '0' to '9' 48 to 57
+- [x] Upper to Lower +32, Lower to Upper -32
+
+
+**CHARACTER TO ASCII**
+
+Given a character, print its ASCII Value
+```cpp
+#include<iostream>
+using namespace std;
+// Char to ASCII
+// a -> 97
+int main(){
+
+    char ch;
+    cin >> ch;
+    
+    cout << (int)ch << endl;
+
+    return 0;
+}
+```
+
+**ASCII TO CHARACTER**
+
+Given an ASCII Value, print the corresponing character
+```cpp
+#include<iostream>
+using namespace std;
+// ASCII to Char
+// 97 -> a
+int main(){
+
+    int num;
+    cin >> num;
+    
+    cout << (char)num << endl;
+
+    return 0;
+}
+```
+
+**CONVERT TO LOWERCASE**
+
+Given an alphabet (lowercase/uppercase), convert into lowercase.
+```cpp
+#include<iostream>
+using namespace std;
+// Upper Case to Lower Case and vice versa
+// A -> a
+int main(){
+
+    char ch;
+    cin >> ch;
+    
+    // Lower to Uppercase
+    if(ch >= 'a' and ch <='z'){
+        cout << (char)(ch - 32) << endl;
+    }
+    
+    // Upper to Lowercase
+    else if(ch >= 'A' and ch <= 'Z'){
+        cout << (char)(ch + 32) << endl;
+    }
+    else{
+        cout << "Special Char can't be converted to Upper/Lower Case" << endl;
+    }
+
+    return 0;
+}
+```
+
+#
+</details>
+
+<details>
+  <summary> Check whether a char is Lower Case, Upper Case, digit or special char</summary>
+
+<br/>
+
+Code :
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+
+    char ch;
+    cin >> ch;
+
+    if(ch >= 'A' and ch <= 'Z'){
+        cout << "Upper Case";
+    }
+    else if(ch >='a' and ch <= 'z'){
+        cout << "Lower Case";
+    }
+    else if(ch >= '0' and ch <= '9'){
+        cout << "Digit";
+    }
+    else{
+        cout << "Special Character";
+    }
+    cout << endl;
+    
+    // we can even put the ASCII code in place for char  
+    // like 65 to 90, 97 to 122, 48 to 57
+
+    return 0;
+}
+```
+
+
+#
+</details>
+
+<details>
+  <summary>  <b> String in C++ </b> </summary>
+
+<br/>
+
+> **String** : Collection / Sequence of characters stored at continuous memory locations.
+
+In C++, there are 2 ways to implement it:
+
+1. **Char Array** (C style)
+- [ ] `char s[100]`;
+- [ ] Ends with `'\0'`
+- [ ] ***Manual memory handling***
+- [ ] ***More error-prone***
+
+C++ provide us a built-in data type i.e. `string` which has built-in functions to smoothly work with strings.
+
+2. **String** (STL)
+- [ ] `string s = "Deva";`
+- [ ] Easier
+- [ ] ***Automatic Memory Management***
+- [ ] ***Less Error prone***
+- [ ] ***More in-built functions available***
+
+<details>
+  <summary> Play with in-built functions </summary>
+
+<br/>
+
+  ```cpp
+#include<iostream>
+#include<string>
+using namespace std;
+
+int main(){
+
+    //string name = 'Ram'; // Error, String must be in " " not ''
+    string name = "Vishnu";
+    cout << name[0] << endl; // 'V'
+    cout << name[5] << endl; // 'u'
+    cout << name[6] << endl; //  ' ' bcuz '\0'
+    cout << name[7] << endl; // Not error but garbage bcuz no bound checking
+    
+    cout << name.at(0) << endl; // 'V'
+    
+    name[0] = 'v'; // not "v" bcuz it can take only char not string
+    cout <<  name[0] << endl; // 'v'
+
+    cout << "-------Functions-------" << endl;
+    // built-in functions
+    cout << name.size() << endl; // 6
+    cout << name.length() << endl; // 6
+    
+    cout << "----append/concatinate-----" << endl;
+
+    name = "Ram";
+    cout << name.append(" is maryadapushutam") << endl; // Ram is maryadapushutam
+    
+    name = "Ram";
+    cout << "Hey " + name << endl; // Hey Ram
+    
+    cout << "----push_back, pop_back, insert----" << endl;
+
+    name = "Lord ";
+    name.push_back('B'); // 'B'
+    cout << name << endl; // "Lord B"
+    name.pop_back();  // 'B'
+    cout << name << endl; // "Lord "
+
+    name = "";
+    name.insert(0,"Dev");
+    cout << name << endl; // "Dev"
+    
+    cout << "----erase/clean----" << endl;
+
+    name = "HelloWorld";
+    name.erase(); // Remove all charaters
+    cout << name << endl; // "" Empty string
+
+    name = "Hello";
+    name.clear(); // Remove all characters
+    cout << name << endl; // "" Empty string
+
+    name = "HelloWorld";
+    cout << name.erase(5, 3) << endl; // Remove 3 char from index 5 "Hellold"
+ 
+    name = "HelloWorld";
+    cout << name.erase(5) << endl; // Remove all char from index 5 onwards "Hello"
+    
+    // Note : No bound checking so it might be undefined behavior if you access out of bound
+    
+    cout << "----substring----" << endl;
+   
+    name = "HelloWorld";
+    cout << name.substr(0, 5) << endl; // "Hello"
+
+    cout << "----Search-----" << endl;
+    name = "Hello World";
+    cout << name.find("Hello") << endl; // 0 (if found return start index)
+    cout << name.find("world") << endl; // -1 (if not found return garbage value)
+
+    cout << "-----comapare------" << endl;
+    string name1 = "Hello";
+    string name2 = "World";
+    cout << name1.compare(name2) << endl; // -1
+    name1 = "ram", name2 = "ram";
+    cout << name1.compare(name2) << endl; // 0
+    
+    name1 = "Hello", name2 = "World";
+    cout << (name1 == name2) << endl; // 0
+    cout << (name1 > name2) << endl; // 0
+    cout << (name1 < name2) << endl; // 1
+
+    return 0;
+}
+```
+</details>
+
+#
+</details>
+
+<details>
+  <summary> <b> Taking inputs string </b> </summary>
+
+<br/>
+
+**Take input a word**
+```cpp
+#include<iostream>
+using namespace std;
+
+int main(){
+
+    // char ch1, ch2, ch3, ch4, ch5;
+    // cin >> ch1 >> ch2 >> ch3 >> ch4 >> ch5; // spaces will be ignored while taking i/p
+
+    // cout << ch1 << ch2 << ch3 << ch4 << ch5 << endl;
+
+    // // move this from char array
+    // char arr[10];
+    // cin >> arr; // takes only a word as i/p
+
+    // cout << arr << endl;
+
+    
+    // 1. For Single Character : cin / get()
+    char ch;
+    cin >> ch;         // Skips whitespace
+    cout << ch << endl;
+    cin.get(ch);       // take whitespace as well
+    cout << ch << endl;
+
+    // 2. For a Word (no spaces)
+    char word[20];
+    cin >> word; // stops at whitespace
+    cout << word << endl;
+    string str;
+    cin >> str; // stops at whitespace
+    cout << str << endl;
+
+
+    // 3. For a Sentence (with spaces)
+    string line;
+    getline(cin, line); // Reads entire line
+    cout << line << endl;
+
+   char buffer[100];
+   cin.getline(buffer, 100); // Reads up to 99 chars + null
+   cout << buffer << endl;
+   
+    return 0;
+}
+```
+
+**Take input a sentence**
+```cpp
+#include<iostream>
+using namespace std;
+
+int main(){
+
+    string sentence;
+    // cin >> sentence;
+    // cout << sentence << endl; // only take first word  which is not right
+   
+    getline(cin, sentence);
+    cout << sentence << endl;
+   
+    return 0;
+}
+```
+
+> `cin >>` stops at whitespace (space, tab, newline). 
+
+> `getline()` stops at newline `(\n)` by default.
+
+> When mixing `cin >>` and `getline()`, use `cin.ignore()` to skip leftover newline:
+```cpp
+#include<iostream>
+using namespace std;
+
+int main(){
+
+    int age;
+    string name;
+
+    // Doesn't work due to \n char
+    // cin >> age;
+    // getline(cin, name); // Now works correctly   
+    // cout << age << endl;
+    // cout << name << endl;
+    
+    // Works perfectly
+    cin >> age;
+    cin.ignore(); // Skips the next character (usually '\n')
+    getline(cin, name); // Now works correctly
+    cout << age << endl;
+    cout << name << endl;
 
     return 0;
 }
